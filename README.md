@@ -3,6 +3,7 @@ To use this tool, you need the following (or equivalent on your photon device's 
 ```
 // in a header
 #if Wiring_WiFi
+#include "softap_http.h"
 #define SOFTAP_PREFIX  "PHOTON"
 System.set(SYSTEM_CONFIG_SOFTAP_PREFIX, SOFTAP_PREFIX);
 void app_page_handler(const char* url, ResponseCallback* cb, void* cbArg, Reader* body, Writer* result, void* reserved);
