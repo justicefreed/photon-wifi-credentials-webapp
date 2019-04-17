@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Setup your device</title>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+    </head>
+    <body>
+        <h1>Particle Device WiFi Setup Tool</h1>
+        <button type='button' id='initial-connect-button'>Connect To Device</button>
+        
+        <p id='connect-feedback'></p>
+        <div id='scan-div' style='display: none'>
+            <h3>Scan for visible WiFi networks</h3>
+            <button id='scan-button' type='button'>Scan</button>
+        </div>
+        <div id='networks-div'></div>
+        <div id='connect-div' style='display: none'>
+            <p>Don't see your network? The Device may be out of range, either extend the network, or move the Gateway then re-scan.</p>
+            <form id='connect-form'>
+                <input type='password' id='password' size='30' placeholder='password'/>
+                <button type='button' class='input-helper' id='show-button'>Show</button>
+                <button type='submit' id='connect-button'>Connect</button>
+            </form>
+        </div>
+
+        <script src='rsa-utils/jsbn_1.js'></script>
+        <script src='rsa-utils/jsbn_2.js'></script>
+        <script src='rsa-utils/prng4.js'></script>
+        <script src='rsa-utils/rng.js'></script>
+        <script src='rsa-utils/rsa.js'></script>
+        <script src='script.js'></script>
+    </body>
+</html>
