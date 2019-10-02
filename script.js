@@ -93,7 +93,7 @@ var public_key_callback={
     error:function(a, b){
         console.log(a);
         resetPage();
-        connectFeedback.innerHTML = '<b>ERROR - Could not connect to Gateway, please retry.</b><br><br>Please make sure Gateway LED is white, and that you are connected to the AMPER-XXX wifi hotspot corresponding to the device.<br><br>  If you are connected to the hotspot, try turning your WiFi off and back on again.';
+        connectFeedback.innerHTML = '<b>ERROR - Could not connect to Photon, please retry.</b><br><br>Please make sure Photon is in softAP mode, and that you are connected to the Photon-XXXX wifi hotspot corresponding to the device.<br><br>  If you are connected to the hotspot, try turning your WiFi off and back on again.';
 }};
 
 var getDevicePublicKey = function(){
