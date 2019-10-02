@@ -3,21 +3,33 @@
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <title>Setup your device</title>
-        <link rel='stylesheet' type='text/css' href='style.css'>
+        <link rel='stylesheet' type='text/css' href='wifi-style.css'>
     </head>
     <body>
-        <h1>Particle Device WiFi Setup Tool</h1>
-        <button type='button' id='initial-connect-button'>Connect To Device</button>
-        
+        <h1>Photon WiFi Setup Tool</h1>
+        <p>To begin, find the device in your WiFi Networks List, labeled Photon-XXXX, and connect to it's WiFi network.</p>
+        <button type='button' id='initial-connect-button'>Connect To Gateway</button>
         <p id='connect-feedback'></p>
+        <div id='manual-div' style='display: none'>
+                <h3>Scan for visible WiFi networks <br>or enter manually</h3>
+            <button id='manual-button' type='button'>Enter Manually</button>
+        </div>
         <div id='scan-div' style='display: none'>
-            <h3>Scan for visible WiFi networks</h3>
             <button id='scan-button' type='button'>Scan</button>
+        </div>
+        <div id='networks-info-div'>
+            <p>Don't see your network? The Gateway may be out of range, either extend the network, or move the Gateway then re-scan.</p>
         </div>
         <div id='networks-div'></div>
         <div id='connect-div' style='display: none'>
-            <p>Don't see your network? The Device may be out of range, either extend the network, or move the Gateway then re-scan.</p>
             <form id='connect-form'>
+                <div id='manual-form' style='display: none'>
+                    <p>SSID</p>
+                    <input type='text' id='ssid' size='30' placeholder='ssid'/>
+                    <div id='security-radio'></div>
+                    <div id='encryption-radio'></div>
+                </div>
+                <p>Password</p>
                 <input type='password' id='password' size='30' placeholder='password'/>
                 <button type='button' class='input-helper' id='show-button'>Show</button>
                 <button type='submit' id='connect-button'>Connect</button>
@@ -29,6 +41,6 @@
         <script src='rsa-utils/prng4.js'></script>
         <script src='rsa-utils/rng.js'></script>
         <script src='rsa-utils/rsa.js'></script>
-        <script src='script.js'></script>
+        <script src='wifi-script.js'></script>
     </body>
 </html>
